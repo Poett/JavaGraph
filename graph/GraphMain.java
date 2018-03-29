@@ -14,10 +14,14 @@ public class GraphMain {
 		
 		System.out.println(G);
 		
-		ArrayList<Vertex> topoG = G.reverseGraph().topoLogicalOrder();
-		Collections.reverse(topoG);
-		
-		System.out.println(topoG);
+		ArrayList<Vertex> topoG = G.topoLogicalOrder();
+
+		System.out.print("{");
+		for(Vertex v : topoG) 
+		{
+			System.out.print(v.getID() + ", ");
+		}
+		System.out.print("}");
 	}
 
 }
